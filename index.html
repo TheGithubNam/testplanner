@@ -17,108 +17,49 @@ https://youtu.be/qVGMtFvk1so?t=217
 https://youtu.be/biOCexhZZd8?t=134-->
 
 
-    <title>Hello, world!</title>
+    <title>Task Planner</title>
   </head>
   <body>
-    <h1>Title!</h1>
+    <h1>Task Form</h1>
     <form>
-      <div class="container"> 
-        <div class="row">    
-          <div class="col">         
-              <div class="col">
-                <label for="nameOfTask"></label>
-                <input type="text" class="form-control" id="nameOfTask" placeholder="Name of the task">
-              </div>
-              <div class="col">
-                <label for="dueDate"></label>
-                <input type="date" class="form-control" id="dueDate" placeholder="Due Date">
-              </div>
-              <div class="col">
-                <label for="assignedTo"></label>
-                <input type="text" class="form-control" id="assignedTo" placeholder="Assigned To">
-              </div>
-              <div class="col">
-                <label for="exampleFormControlSelect2"></label>
-              <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                <option selected>Select Status </option>
-                <option value="1">To Do</option>
-                <option value="2">In Progress</option>
-                <option value="3">Review</option>
-                <option value="3">Done</option>
-              </select>        
-              </div>
-            </div>            
-            <div class="col">
-              <label for="exampleFormControlTextarea1"></label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Description</textarea>
-            </div>
-          </div>
-        </div>  
-      </div>           
-
-        <!-- separate container -->       
-        <button type="submit" class="btn btn-primary mb-2">Save Changes</button>
-      
-    </form>
-</div>
-
-<br>
-         
-
-
-<form>
-    <div class="container">
-        <div class="row">
-         <div class="col-md-6" >
-              <div cclass="form-group">
-                 <label for="nameOfTask"></label>
-                 <input type="text" class="form-control" id="nameOfTask" placeholder="Name of the task">
-              </div>
-              <div class="form-group">
-                 <label for="dueDate"></label>
-                 <input type="date" class="form-control" id="dueDate" placeholder="Due Date">
-              </div>
-              <div class="form-group">
-                 <label for="assignedTo"></label>
-                 <input type="text" class="form-control" id="assignedTo" placeholder="Assigned To">
-              </div>
-              <div class="form-group">
-                     <label for="exampleFormControlSelect1"></label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option selected>Select Status </option>
-                            <option value="1">To Do</option>
-                            <option value="2">In Progress</option>
-                            <option value="3">Review</option>
-                            <option value="3">Done</option>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" >
+                    <div class="form-group">
+                        <label for="nameOfTask" class="form-label"></label>
+                        <input type="text" name ="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the task">
+                    </div>
+                    <div class="form-group">
+                        <label for="dueDate" class="form-label"></label>
+                        <input type="date" name ="dueDate" class="form-control" id="dueDate" placeholder="Due Date">
+                    </div>
+                    <div class="form-group">
+                        <label for="assignedTo" class="form-label"></label>
+                        <input type="text" name ="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="form-label"></label>
+                          <select class="form-control" name ="status" id="status">
+                            <option selected>Select Status</option>
+                            <option value="TODO">TODO</option>
+                            <option value="IN PROGRESS">IN PROGRESS</option>
+                            <option value="REVIEW">REVIEW</option>
+                            <option value="DONE">DONE</option>
                           </select>        
-              </div>
-              <br>
-              <button type="button" class="btn btn-primary btn-md btn-block">Save changes</button>
-         </div>         
-         <div class="col-md-6">
-              <div class="form-group">
-                  <label for="exampleFormControlTextarea1"></label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">Description</textarea>
-              </div>
-              <br>
-              <div class="btn-block">
-                  <button type="button" class="btn btn-primary btn-md btn-block">Save changes</button>
-              </div>
-          
-              
-         </div>   
-
-    </div>
-    </div>
-
-</form>  
-
-
-
-
-
-
-
+                    </div>
+                </div>         
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="description" class="form-label"></label>
+                        <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
+                    </div>
+                </div>                
+                <div class="d-grid gap-2 d-md-block mx-auto">
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>     
+    </form>  
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
