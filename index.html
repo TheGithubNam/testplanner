@@ -14,43 +14,42 @@
     <h1>Task Form</h1>
     <form>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6" >
-               
-                    <div class="form-group">
-                        <label for="nameOfTask" class="form-label"></label>
-                        <input type="text" name ="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the task">
-                    </div>
-                    <div class="form-group">
-                      <label for="dueDate" class="form-label"></label>
-                        <input placeholder="Enter Due Date" class="form-control" type="text" onfocus="(this.type = 'date')"  id="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="assignedTo" class="form-label"></label>
-                        <input type="text" name ="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
-                    </div>
-                    <div class="form-group">
-                        <label for="status" class="form-label"></label>
-                          <select class="form-control" name ="status" id="status">
-                            <option selected>Select Status</option>
-                            <option value="TODO">TODO</option>
-                            <option value="IN PROGRESS">IN PROGRESS</option>
-                            <option value="REVIEW">REVIEW</option>
-                            <option value="DONE">DONE</option>
-                          </select>        
-                    </div>
-                </div>         
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="description" class="form-label"></label>
-                        <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
-                    </div>
-                </div>                
-                <div class="d-grid gap-2 d-md-block mx-auto">
-                  <button type="submit" class="btn btn-primary">Save changes</button>
+          <div class="row">
+            <div class="col-md-6" >               
+              <div class="form-group">
+                <label for="nameOfTask" class="form-label"></label>
+                <input type="text" name="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the task">
+              </div>
+              <div class="form-group">
+                <label for="dueDate" class="form-label"></label>
+                <input placeholder="Enter Due Date" class="form-control" type="text" onfocus="(this.type = 'date')" name="date" id="date">
+              </div>
+              <div class="form-group">
+                  <label for="assignedTo" class="form-label"></label>
+                  <input type="text" name="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
+              </div>
+              <div class="form-group">
+                <label for="status" class="form-label"></label>
+                  <select class="form-control" name="status" id="status">
+                  <option selected>Select Status</option>
+                  <option value="TODO">TODO</option>
+                  <option value="IN PROGRESS">IN PROGRESS</option>
+                  <option value="REVIEW">REVIEW</option>
+                  <option value="DONE">DONE</option>
+                  </select>      
+              </div>
+            </div>         
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="description" class="form-label"></label>
+                  <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
                 </div>
-            </div>
-        </div>     
+              </div>                
+              <div class="d-grid gap-2 d-md-block mx-auto">
+                <button type="submit" class="btn btn-primary">Save changes</button>
+              </div>
+          </div>
+        </div>    
     </form>  
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
