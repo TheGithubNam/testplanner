@@ -9,52 +9,181 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Task Planner</title>
+    <h1>Task Planner</h1>
   </head>
+      <div class="container"></div>
+      
+           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add Task</button>
+  
+    </div>
   <body>
-    <h1>Task Form</h1>
-    <form>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6" >               
-              <div class="form-group">
-                <label for="nameOfTask" class="form-label"></label>
-                <input type="text" name="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the task">
-              </div>
-              <div class="form-group">
-                <label for="dueDate" class="form-label"></label>
-                <input placeholder="Enter Due Date" class="form-control" type="text" onfocus="(this.type = 'date')" name="date" id="date">
-              </div>
-              <div class="form-group">
-                  <label for="assignedTo" class="form-label"></label>
-                  <input type="text" name="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
-              </div>
-              <div class="form-group">
-                <label for="status" class="form-label"></label>
-                  <select class="form-control" name="status" id="status">
-                  <option selected>Select Status</option>
-                  <option value="TODO">TODO</option>
-                  <option value="IN PROGRESS">IN PROGRESS</option>
-                  <option value="REVIEW">REVIEW</option>
-                  <option value="DONE">DONE</option>
-                  </select>      
-              </div>
-            </div>         
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="description" class="form-label"></label>
-                  <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
-                </div>
-              </div>                
-              <div class="d-grid gap-2 d-md-block mx-auto">
-                <button type="submit" class="btn btn-primary">Save changes</button>
-              </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
           </div>
-        </div>    
-    </form>  
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Task Name</div>
+            <div class="card-header bg-transparent border-success">Status</div>
+            <div class="card-body text-success">
+              <p class="card-text">Description Description Description Description Description Description Description Description</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Assigned To</div>
+            <div class="card-footer bg-transparent border-success">Due Date</div>          
+            <div class="card-footer bg-transparent border-success mx-auto">
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Save changes"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="container">
+  
+            <div class="row">
+              <div class="col-md-6" >               
+                <div class="form-group">
+                  <label for="nameOfTask" class="form-label"></label>
+                  <input type="text" name="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the task">
+                </div>
+                <div class="form-group">
+                  <label for="dueDate" class="form-label"></label>
+                  <input placeholder="Enter Due Date" class="form-control" type="text" onfocus="(this.type = 'date')" name="date" id="date">
+                </div>
+                <div class="form-group">
+                    <label for="assignedTo" class="form-label"></label>
+                    <input type="text" name="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
+                </div>
+                <div class="form-group">
+                  <label for="status" class="form-label"></label>
+                    <select class="form-control" name="status" id="status">
+                    <option selected>Select Status</option>
+                    <option value="TODO">TODO</option>
+                    <option value="IN PROGRESS">IN PROGRESS</option>
+                    <option value="REVIEW">REVIEW</option>
+                    <option value="DONE">DONE</option>
+                    </select>      
+                </div>
+              </div>         
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="description" class="form-label"></label>
+                    <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
+                  </div>
+                </div>                
+            </div>
+          </div>    
+      </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
   </body>
 </html>
 
