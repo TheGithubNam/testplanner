@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Javascript link -->
+    <script src="index.js"></script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,26 +146,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Save changes"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="container">
-  
+        <form id="newTaskForm">
+          <div class="container">  
             <div class="row">
               <div class="col-md-6" >               
                 <div class="form-group">
-                  <label for="nameOfTask" class="form-label"></label>
-                  <input type="text" name="nameOfTask" class="form-control" id="nameOfTask" placeholder="Name of the Task">
+                  <label for="newTaskName" class="form-label"></label>
+                  <input type="text" name="newTaskName" class="form-control" id="newTaskName" placeholder="Name of the Task">
                 </div>
                 <div class="form-group">
-                  <label for="dueDate" class="form-label"></label>
-                  <input placeholder="Enter Due Date" class="form-control" type="text" onfocus="(this.type = 'date')" name="date" id="date">
+                  <label for="newTaskDate" class="form-label"></label>
+                  <input placeholder="Enter Due Date" class="form-control" type="date" onfocus="(this.type = 'date')" name="newTaskDate" id="newTaskDate">
                 </div>
                 <div class="form-group">
-                    <label for="assignedTo" class="form-label"></label>
-                    <input type="text" name="assignedTo" class="form-control" id="assignedTo" placeholder="Assigned To">
+                    <label for="newTaskAssignedTo" class="form-label"></label>
+                    <input type="text" name="newTaskAssignedTo" class="form-control" id="newTaskAssignedTo" placeholder="Assigned To">
                 </div>
                 <div class="form-group">
-                  <label for="status" class="form-label"></label>
-                    <select class="form-control" name="status" id="status">
+                  <label for="newTaskStatus" class="form-label"></label>
+                    <select class="form-control" name="newTaskStatus" id="newTaskStatus">
                     <option selected>Select Status</option>
                     <option value="TODO">TODO</option>
                     <option value="IN PROGRESS">IN PROGRESS</option>
@@ -173,8 +175,8 @@
               </div>         
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="description" class="form-label"></label>
-                    <textarea class="form-control" name="description" id="description" rows="10">Description</textarea>
+                    <label for="newTasksDescription" class="form-label"></label>
+                    <textarea class="form-control" name="newTaskDescription" id="newTaskDescription" rows="10">Description</textarea>
                   </div>
                 </div>                
             </div>
