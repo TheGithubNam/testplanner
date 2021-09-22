@@ -3,24 +3,19 @@ function validFormFieldInput(data) {
 
 };
 // Question 3
-const newTask = document.querySelector('#newTaskForm');
-
-newTask.addEventListener("submit", (event) => {
+const buttonAdd = document.querySelector('#newTaskSubmit');
 const newTaskName = document.querySelector('#newTaskName');
 const newTaskDate = document.querySelector('#newTaskDate');
 const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
 const newTaskStatus = document.querySelector('#newTaskStatus');
 const newTaskDescription = document.querySelector('#newTaskDescription');
+
+buttonAdd.addEventListener("click", (event) => {
+
 let validationFail = 0;
 
 event.preventDefault();
 event.stopPropagation();
-// Question 4
-console.log("name:  " + newTaskName.value.length);
-console.log("Due Date:  " + newTaskDate.value);
-console.log("assignedTo:  " + newTaskAssignedTo.value.length);
-console.log("status:  " + newTaskStatus.value);
-console.log("description:  " + newTaskDescription.value.length);
 
   // Form validation for Task Name Field min length 5
   if (newTaskName.value.length > 5) {
@@ -73,7 +68,7 @@ console.log("description:  " + newTaskDescription.value.length);
   // If validation fails then function will not proceed further and
   // will return. The value of validationFail will also needed to be
   // reset to 0.
-  // ----------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------------*/
   if (validationFail > 0) {
     validationFail = 0;
     return;
