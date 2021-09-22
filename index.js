@@ -3,14 +3,14 @@ function validFormFieldInput(data) {
 
 };
 // Question 3
-const buttonAdd = document.querySelector('#newTaskSubmit');
+const newTask = document.querySelector('#newTaskForm');
 const newTaskName = document.querySelector('#newTaskName');
 const newTaskDate = document.querySelector('#newTaskDate');
 const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
 const newTaskStatus = document.querySelector('#newTaskStatus');
 const newTaskDescription = document.querySelector('#newTaskDescription');
 
-buttonAdd.addEventListener("click", (event) => {
+newTask.addEventListener("submit", (event) => {
 
 let validationFail = 0;
 
