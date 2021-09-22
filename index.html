@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Javascript link -->
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -152,7 +152,11 @@
               <div class="col-md-6" >               
                 <div class="form-group">
                   <label for="newTaskName" class="form-label"></label>
-                  <input type="text" name="newTaskName" class="form-control" id="newTaskName" placeholder="Name of the Task">
+                  <input type="text" name="newTaskName" class="form-control" id="newTaskName" placeholder="Name of the Task" required/>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">
+                    Please provide a valid name with more than 5 characters.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="newTaskDate" class="form-label"></label>
