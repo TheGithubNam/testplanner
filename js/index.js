@@ -1,3 +1,6 @@
+const taskManager = new TaskManager(0);
+taskManager.addTask();
+
 // Question 2
 function validFormFieldInput(data) {
 
@@ -16,6 +19,25 @@ let validationFail = 0;
 
 event.preventDefault();
 event.stopPropagation();
+
+const clearFormFields = () => {
+  newTaskName.value = "";
+  newTaskDescription.value = "";
+  newTaskAssignedTo.value = "";
+  newTaskStatus.value = "In Progress";
+  newTaskDate.value = "";
+  newTaskName.classList.remove("is-valid");
+  newTaskDescription.classList.remove("is-valid");
+  newTaskAssignedTo.classList.remove("is-valid");
+  newTaskStatus.classList.remove("is-valid");
+  newTaskDate.classList.remove("is-valid");
+};
+
+console.log("Task Name :" + newTaskName.value);
+console.log("Task Description :" + newTaskDescription.value.length);
+console.log("Task Assigned To :" + newTaskAssignedTo.value.length);
+console.log("Task Date :" + newTaskDate.value);
+console.log("Task Status:" + newTaskStatus.value);
 
   // Form validation for Task Name Field min length 5
   if (newTaskName.value.length > 5) {
@@ -72,5 +94,15 @@ event.stopPropagation();
   if (validationFail > 0) {
     validationFail = 0;
     return;
+  } else {
+    // Push the valid input into our tasks array
+    taskManager.addTask(
+      newTaskName.value,
+      newTaskDescription.value,
+      newTaskAssignedTo.value,
+      newTaskDate.value,
+      newTaskStatus.value
+    );
+    clearFormFields();
   }
 });
