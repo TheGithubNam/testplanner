@@ -1,5 +1,6 @@
 const taskManager = new TaskManager(0);
 taskManager.addTask();
+//console.log(taskManager);
 
 // Question 2
 function validFormFieldInput(data) {
@@ -106,3 +107,7 @@ console.log("Task Status:" + newTaskStatus.value);
     clearFormFields();
   }
 });
+
+// task 7 test code
+const taskHtml = createTaskHtml('hello', 'hellohello', 'hellohello', '2021-10-01', 'Done');
+console.log(taskHtml);
