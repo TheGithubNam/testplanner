@@ -1,6 +1,7 @@
 //Task 7.1, 7.2, 7.3 
 const createTaskHtml = (name, description, assignedTo, dueDate, status ) => {  
     const html = `
+   
     <div class="col-sm-4">
         <div class="card">
         <div class="card border-success mb-3" style="max-width: 18rem;">
@@ -18,6 +19,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status ) => {
         </div>
         </div>
         </div>
+    
     `;
         // task 7.4
         return html;
@@ -51,7 +53,7 @@ class TaskManager {
         const task = this.tasks[i];
         //console.log(this.tasks[i]);
         let date = new Date(task.dueDate);
-        let formattedDate = (date.getDate() + (date.getMonth()+1) + date.getFullYear());
+        let formattedDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
         //console.log(task.name);
         let taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate, task.status);
         //console.log(task);
