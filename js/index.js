@@ -110,7 +110,31 @@ const clearFormFields = () => {
     taskManager.render();    
   }  
 });
+// task 8 - step 2.2, 2.3, 2.4, 2.5
+const listOfTasks = document.querySelector("#tasksList");
+listOfTasks.addEventListener("click", (event) => {
+  // 2.5
+    if (event.target.classList.contains("done-button")) {
+     // console.log(event.target.parentElement);
+    // 2.6
+     const parentTask =
+     event.target.parentElement.parentElement;
+    // console.log(parentTask);
+     // task 8 - step 5.2
+     const taskId = Number(parentTask.dataset.taskId);
+     //console.log(taskId);
+     const task = taskManager.getTaskById(taskId);
+     //console.log(task);
+     // task 8 - step 5.4
+     task.status = "DONE";
+     console.log(task.status);
+     taskManager.render();
+    }
+    
+});
 
+taskManager.getTaskById();
+console.log(taskManager);
 // task 7 test code
 //const taskHtml = createTaskHtml();
 //console.log(taskHtml);
