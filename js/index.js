@@ -1,5 +1,5 @@
 const taskManager = new TaskManager(0);
-taskManager.addTask();
+//taskManager.addTask();
 //console.log(taskManager);
 
 // Question 2
@@ -34,11 +34,11 @@ const clearFormFields = () => {
   newTaskDate.classList.remove("is-valid");
 };
 
-console.log("Task Name :" + newTaskName.value);
-console.log("Task Description :" + newTaskDescription.value.length);
-console.log("Task Assigned To :" + newTaskAssignedTo.value.length);
-console.log("Task Date :" + newTaskDate.value);
-console.log("Task Status:" + newTaskStatus.value);
+//console.log("Task Name :" + newTaskName.value);
+//console.log("Task Description :" + newTaskDescription.value.length);
+//console.log("Task Assigned To :" + newTaskAssignedTo.value.length);
+//console.log("Task Date :" + newTaskDate.value);
+//console.log("Task Status:" + newTaskStatus.value);
 
   // Form validation for Task Name Field min length 5
   if (newTaskName.value.length > 5) {
@@ -97,6 +97,7 @@ console.log("Task Status:" + newTaskStatus.value);
     return;
   } else {
     // Push the valid input into our tasks array
+    //console.log(newTaskName.value);
     taskManager.addTask(
       newTaskName.value,
       newTaskDescription.value,
@@ -104,10 +105,12 @@ console.log("Task Status:" + newTaskStatus.value);
       newTaskDate.value,
       newTaskStatus.value
     );
+    //Step 3
     clearFormFields();
-  }
+    taskManager.render();    
+  }  
 });
 
 // task 7 test code
-const taskHtml = createTaskHtml('hello', 'hellohello', 'hellohello', '2021-10-01', 'Done');
-console.log(taskHtml);
+//const taskHtml = createTaskHtml();
+//console.log(taskHtml);
