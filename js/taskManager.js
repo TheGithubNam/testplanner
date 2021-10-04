@@ -11,7 +11,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
             <div class="card-footer bg-transparent border-success">${assignedTo}</div>
             <div class="card-footer bg-transparent border-success">${dueDate}</div>          
          <div class="card-footer bg-transparent border-success mx-auto">
-              <button class="btn btn-primary done-button">Done</button>
+              <button class="btn btn-primary done-button ${status === "DONE" ? "invisible" : "visible"}">Done</button>
              <button class="btn btn-primary">Delete</button>
             </div>
         </div>
@@ -73,6 +73,39 @@ class TaskManager {
     const tasksList = document.querySelector("#tasksList");
     //console.log(tasksList);
     tasksList.innerHTML = tasksHtml;
-};
-
 }
+
+    //task 9 step 1.1-1.5
+
+    save() {
+        // Create a JSON string of the tasks
+        const tasksJson = JSON.stringify(this.tasks);
+    
+        // Store the JSON string in localStorage
+        localStorage.setItem("tasks", tasksJson);
+    
+        // Convert the currentId to a string;
+        const currentId = String(this.currentId);
+    
+        // Store the currentId in localStorage
+        localStorage.setItem("currentId", currentId);
+      }
+
+    //task 9 step 2
+
+    load() {
+        if (localStorage.getItem("tasks")) {
+            const tasksJson = localStorage.getItem("tasks");
+            this.tasks = JSON.parse(tasksJson);
+        }
+        if (localStorage.getItem("currentId")) {
+            const currentId = localStorage.getItem("currentId");
+            this.currentId = Number(currentId);
+        }
+                
+        }
+    }
+    
+
+
+

@@ -1,4 +1,6 @@
 const taskManager = new TaskManager(0);
+taskManager.load();
+taskManager.render();
 //taskManager.addTask();
 //console.log(taskManager);
 
@@ -107,6 +109,8 @@ const clearFormFields = () => {
     );
     //Step 3
     clearFormFields();
+    //task 9 step 1.6
+    taskManager.save();
     taskManager.render();    
   }  
 });
@@ -119,22 +123,26 @@ listOfTasks.addEventListener("click", (event) => {
     // 2.6
      const parentTask =
      event.target.parentElement.parentElement;
-     console.log(parentTask);
+     //console.log(parentTask);
      // task 8 - step 5.2
      const taskId = Number(parentTask.dataset.taskId);
-     console.log(taskId);
+     //console.log(taskId);
      const task = taskManager.getTaskById(taskId);
-     console.log(task);
+     //console.log(task);
      // task 8 - step 5.4
      task.status = "DONE";
-     console.log(task.status);
+     
+     //console.log(task.status);
      taskManager.render();
+
+     
     }
     
 });
 
 taskManager.getTaskById();
 console.log(taskManager);
+
 // task 7 test code
 //const taskHtml = createTaskHtml();
 //console.log(taskHtml);
