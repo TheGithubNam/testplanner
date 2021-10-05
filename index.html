@@ -46,7 +46,7 @@
         <form id="newTaskForm">
           <div class="container">  
             <div class="row">
-              <div class="col-md-6" >               
+              <div class="col-md-6">               
                 <div class="form-group">
                   <label for="newTaskName" class="form-label"></label>
                   <input type="text" name="newTaskName" class="form-control" id="newTaskName" placeholder="Name of the Task" required/>
@@ -74,16 +74,16 @@
                 <div class="form-group">
                   <label for="newTaskStatus" class="form-label"></label>
                     <select class="form-control" name="newTaskStatus" id="newTaskStatus">
-                    <option selected>Select Status</option>
+                    <option value="" disabled selected hidden >Select status</option>
                     <option value="TODO">TODO</option>
                     <option value="IN PROGRESS">IN PROGRESS</option>
                     <option value="REVIEW">REVIEW</option>
                     <option value="DONE">DONE</option>
+                  </select> 
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">
-                    Task status can not be empty.</div>
-                    </select>                   
-                </div>
+                    Task status can not be empty.</div> 
+                    </div>
               </div>         
               <div class="col-md-6">
                 <div class="form-group">

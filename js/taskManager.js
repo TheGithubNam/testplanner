@@ -5,14 +5,14 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
         <div class="card border-success mb-3" style="max-width: 18rem;" data-task-id="${id}">
             <div class="card-header bg-transparent border-success">${name}</div>
             <div class="card-header bg-transparent border-success">${status}</div>
-            <div class="card-body text-success">
+            <div class="card-body">
             <p class="card-text">${description}</p>
             </div>
             <div class="card-footer bg-transparent border-success">${assignedTo}</div>
             <div class="card-footer bg-transparent border-success">${dueDate}</div>          
          <div class="card-footer bg-transparent border-success mx-auto">
               <button class="btn btn-primary done-button ${status === "DONE" ? "invisible" : "visible"}">Done</button>
-             <button class="btn btn-primary">Delete</button>
+             <button class="btn btn-primary delete-button">Delete</button>
             </div>
         </div>
         </div>
@@ -28,6 +28,17 @@ class TaskManager {
         this.tasks = [];       
         this.currentId = currentId; 
     }    
+    //Task 10, step 2.1-4
+    deleteTask(taskId) {
+        const newTasks = [];
+        for (let i=0; i<this.tasks.length;i++) {
+            const task = this.tasks[i];
+            if (task.id !== taskId) {
+                newTasks.push(task);
+            }
+        }
+        this.tasks = newTasks;
+    };
 
     addTask(name, description, assignedTo, dueDate, status) {
         const task = {
