@@ -1,21 +1,34 @@
 //Task 7.1, 7.2, 7.3, // task 8 step 3.1 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {  
     const html = `
-    <div class="col-sm-4"> 
-        <div class="card border-success mb-3  mx-auto" style="max-width: 18rem;" data-task-id="${id}">
-            <div class="card-header bg-transparent border-success">${name}</div>
-            <div class="card-header bg-transparent border-success">${status}</div>
+    <div class="col-sm-4 mb-5"> 
+        <div class="card border border-3 mb-3 mx-auto" style="max-width: 18rem;" data-task-id="${id}">            
+            <div class="card-header bg-primary bg-gradient pt-4 border-white">
+                 <span class="text-white fw-bold fs-5 ">Task Name</span>             
+                 <p class="my-2 text-white pb-2">${name}</p>
+            </div>
+            <div class="card-header bg-transparent pt-3">
+            <span class="text-dark fw-bold fs-5">Status</span>             
+                 <p class="my-2">${status}</p>
+            </div> 
             <div class="card-body">
-            <p class="card-text">${description}</p>
+            <span class="card-text text-dark fw-bold fs-5";>Description</span>
+                <p class="mt-2 overflow-auto" style="height: 45px">${description}</p>             
             </div>
-            <div class="card-footer bg-transparent border-success">${assignedTo}</div>
-            <div class="card-footer bg-transparent border-success">${dueDate}</div>          
-         <div class="card-footer bg-transparent border-success mx-auto">
-              <button class="btn btn-primary done-button ${status === "DONE" ? "invisible" : "visible"}">Done</button>
-             <button class="btn btn-primary delete-button">Delete</button>
+            <div class="card-footer bg-transparent pt-3">
+                <span class="text-dark fw-bold fs-5 ">Assigned To</span>             
+                    <p class="my-2">${assignedTo}</p>
+            </div>
+            <div class="card-footer bg-transparent pt-3">
+                 <span class="text-dark fw-bold fs-5 ">Due Date</span>             
+                     <p class="my-2">${dueDate}</p>
+            </div>          
+            <div class="card-footer bg-transparent mx-auto border-white">
+                <button class="btn btn-primary done-button ${status === "DONE" ? "invisible" : "visible"}">Done</button>
+                <button class="btn btn-primary delete-button">Delete</button>
             </div>
         </div>
-        </div>
+    </div>
     
     `;
         // task 7.4
