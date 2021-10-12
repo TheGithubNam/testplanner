@@ -2,7 +2,7 @@
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {  
     const html = `
     <div class="col-sm-4"> 
-        <div class="card border-success mb-3" style="max-width: 18rem;" data-task-id="${id}">
+        <div class="card border-success mb-3  mx-auto" style="max-width: 18rem;" data-task-id="${id}">
             <div class="card-header bg-transparent border-success">${name}</div>
             <div class="card-header bg-transparent border-success">${status}</div>
             <div class="card-body">

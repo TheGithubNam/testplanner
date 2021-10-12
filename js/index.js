@@ -131,6 +131,8 @@ listOfTasks.addEventListener("click", (event) => {
      //console.log(task);
      // task 8 - step 5.4
      task.status = "DONE";
+     taskManager.save();
+
      
      //console.log(task.status);
      taskManager.render();
