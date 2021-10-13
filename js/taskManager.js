@@ -28,11 +28,10 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
                 <button class="btn btn-primary delete-button">Delete</button>
             </div>
         </div>
-    </div>
-    
+    </div>    
     `;
-        // task 7.4
-        return html;
+    // task 7.4
+    return html;
 };
 
 
@@ -44,7 +43,7 @@ class TaskManager {
     //Task 10, step 2.1-4
     deleteTask(taskId) {
         const newTasks = [];
-        for (let i=0; i<this.tasks.length;i++) {
+        for (let i = 0; i < this.tasks.length; i++) {
             const task = this.tasks[i];
             if (task.id !== taskId) {
                 newTasks.push(task);
@@ -62,7 +61,6 @@ class TaskManager {
             dueDate: dueDate,
             status: status,
         };
-        //console.log(task);
     this.tasks.push(task);
     }
     // Step 4.2. 4.3, 4.4 i & ii
@@ -76,28 +74,20 @@ class TaskManager {
         }
         return foundTask; 
     }
-    // Task 7 - Step 2.1
+
     render() {
-    // Task 7 - step 2.2
-    let tasksHtmlList = [];
-    for (let i = 0; i < this.tasks.length; i++) {
-    // Task 7 - step 2.3.i,ii,iii, iv, v
-        const task = this.tasks[i];
-        //console.log(this.tasks[i]);
-        let date = new Date(task.dueDate);
-        let formattedDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-        //console.log(task.name);
-        let taskHtml = createTaskHtml(task.id, task.name, task.description, task.assignedTo, formattedDate, task.status);
-        //console.log(task);
-        tasksHtmlList.push(taskHtml);
+        let tasksHtmlList = [];
+        for (let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            let date = new Date(task.dueDate);
+            let formattedDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
+            let taskHtml = createTaskHtml(task.id, task.name, task.description, task.assignedTo, formattedDate, task.status);
+            tasksHtmlList.push(taskHtml);
+        }
+        const tasksHtml = tasksHtmlList.join("\n");
+        const tasksList = document.querySelector("#tasksList");
+        tasksList.innerHTML = tasksHtml;
     }
-    // task 7 step 2.4
-    const tasksHtml = tasksHtmlList.join("\n");
-    //task 7 step 2.6
-    const tasksList = document.querySelector("#tasksList");
-    //console.log(tasksList);
-    tasksList.innerHTML = tasksHtml;
-}
 
     //task 9 step 1.1-1.5
 

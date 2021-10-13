@@ -1,13 +1,7 @@
 const taskManager = new TaskManager(0);
 taskManager.load();
 taskManager.render();
-//taskManager.addTask();
-//console.log(taskManager);
 
-// Question 2
-function validFormFieldInput(data) {
-
-};
 // Question 3
 const newTask = document.querySelector('#newTaskForm');
 const newTaskName = document.querySelector('#newTaskName');
@@ -35,12 +29,6 @@ const clearFormFields = () => {
   newTaskStatus.classList.remove("is-valid");
   newTaskDate.classList.remove("is-valid");
 };
-
-//console.log("Task Name :" + newTaskName.value);
-//console.log("Task Description :" + newTaskDescription.value.length);
-//console.log("Task Assigned To :" + newTaskAssignedTo.value.length);
-//console.log("Task Date :" + newTaskDate.value);
-//console.log("Task Status:" + newTaskStatus.value);
 
   // Form validation for Task Name Field min length 5
   if (newTaskName.value.length > 5) {
@@ -93,13 +81,11 @@ const clearFormFields = () => {
   // If validation fails then function will not proceed further and
   // will return. The value of validationFail will also needed to be
   // reset to 0.
-  // ----------------------------------------------------------------------------------*/
   if (validationFail > 0) {
     validationFail = 0;
     return;
   } else {
     // Push the valid input into our tasks array
-    //console.log(newTaskName.value);
     taskManager.addTask(
       newTaskName.value,
       newTaskDescription.value,
@@ -119,22 +105,15 @@ const listOfTasks = document.querySelector("#tasksList");
 listOfTasks.addEventListener("click", (event) => {
   // 2.5
     if (event.target.classList.contains("done-button")) {
-     // console.log(event.target.parentElement);
     // 2.6
      const parentTask =
      event.target.parentElement.parentElement;
-     //console.log(parentTask);
      // task 8 - step 5.2
      const taskId = Number(parentTask.dataset.taskId);
-     //console.log(taskId);
      const task = taskManager.getTaskById(taskId);
-     //console.log(task);
      // task 8 - step 5.4
      task.status = "DONE";
      taskManager.save();
-
-     
-     //console.log(task.status);
      taskManager.render();
     }
     // task 10, step 3.1 - 7
@@ -145,13 +124,8 @@ listOfTasks.addEventListener("click", (event) => {
       taskManager.deleteTask(taskId);
       taskManager.save();
       taskManager.render();
-    }
-    
+    }    
 });
 
 taskManager.getTaskById();
 console.log(taskManager);
-
-// task 7 test code
-//const taskHtml = createTaskHtml();
-//console.log(taskHtml);
